@@ -1,11 +1,28 @@
-import { useState } from 'react'
+import 'react'
+import { Header } from './components/header/Header'
+import { Sidebar } from './components/sidebar/Sidebar'
+
+
+import styles from './app.module.css'
+import './global.css'
 
 export function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <h1>Olá</h1>
+    <div>
+      <Header />
+      <div className={styles.wrapper}>
+      <Sidebar />
+        {/* <main>
+          <Post 
+            author="Jessica Severino"
+            content="Text example for content post and is nothing content, just exemplifying letters."
+          />
+          <Post 
+            author="Jessica Severino"
+            content="Text example for content post and is nothing content, just exemplifying letters."
+          />
+        </main> */}
+      </div>
     </div>
   )
 }
